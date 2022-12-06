@@ -1,0 +1,15 @@
+data:
+  - CCN
+  - EMAIL
+rules:
+  - identities:
+      users:
+        - bob.blastoff@hhiu.us
+    reads:
+      - data: any
+        rows: 5
+        severity: low
+        additionalChecks: |
+          is_valid_request {
+            cyralContext.attributes.checkMe == "letMeIn"
+          }

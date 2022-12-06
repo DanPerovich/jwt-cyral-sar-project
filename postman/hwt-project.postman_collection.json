@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "d1eed079-3903-41a5-a1bf-44a6afcfa33d",
+		"name": "hwt-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Bob\",\n    \"last_name\": \"Blastoff\",\n    \"email\": \"bob.blastoff@hhiu.us\",\n    \"password\": \"Password1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bob.blastoff@hhiu.us\",\n    \"password\": \"Password1234\",\n    \"secret\": \"letMeIn\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "welcome",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{currentJwtToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/welcome?limit=4",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"welcome"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
