@@ -4,8 +4,8 @@
   "description": "A demo about authentication using jwt",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node index_sar.js",
+    "dev": "nodemon index_sar.js",
     "original": "node index_orig.js",
     "sar": "node index_sar.js",
     "sarV2": "node index_sar_enhanced.js",
@@ -13,19 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Olanetsoft/jwt-project.git"
+    "url": "git+https://github.com/DanPerovich/jwt-cyral-sar-project.git"
   },
   "keywords": [
     "jwt",
     "node",
     "authentication"
   ],
-  "author": "Idris Olubisi",
+  "author": "Dan Perovich",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Olanetsoft/jwt-project/issues"
+    "url": "https://github.com/DanPerovich/jwt-cyral-sar-project/issues"
   },
-  "homepage": "https://github.com/Olanetsoft/jwt-project#readme",
+  "homepage": "https://github.com/DanPerovich/jwt-cyral-sar-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
